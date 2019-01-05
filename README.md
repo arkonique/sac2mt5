@@ -49,11 +49,9 @@ source install.sh
     -d/--directory   Specify the directory containing all the SAC files. 
                      This directory must also contain a subdirectory called RESP containing all the instrument response files
 
-    -o/--output      Specify the name of the output DSN file. This will be created inside a directory called selected_s2m in                      the data directory.
+    -o/--output      Specify the name of the output DSN file. This will be created inside a directory called selected_s2m in                      the data directory. Preferrably a 6 digit code.
 
     -h/--help        Display this help
-
-    -o/--output      Specify the name of the output DSN file. This will be created inside the data directory. Do not include the filename extension.
 
     -t/--date        Specify the date and time in YY/MM/DD/HH/mm/ss.s format
 
@@ -71,9 +69,21 @@ source install.sh
 --------------------
 
 **Updates:**
+
+The older repository containing v1.0 has been removed so those changes are no longer available
+
 1. Added capability to also mark P and S wave arrival times, along with adding the necessary headers and selecting only those seismograms with a P or S wave arrival within the specified window
 
---------------------
+2. Added capability to create separate DSN files for each 100 stations in the data directory as the maximum limit for MT5 for the number of stations in 100
+
+3. Added capability to separately created different DSN files for P ans S waves for an easier handling of the results when using MT5INT
+
+
+**Bugfixes**
+
+- Changed the input format for dates due to a datetime input error, which caused the script to fail when passing inputs from an event list file through a script when time is in single digits. The change in format also allows for more readable inputs.
+- Fixed station selection algorithm for selecting each 100 stations, which caused stations with similar names to get selected.
+- Fixed creation of S wave DSN files, which are created with the E component of a station, followed by the N component, which were being created haphazardly in the beginning
 
 --------------------
 
