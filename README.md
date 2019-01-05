@@ -97,11 +97,11 @@ The older repository containing v1.0 has been removed so those changes are no lo
 
 #### Upcoming updates:
 
-[ ] A settings file to enable selection of required paths to avoid manual adjustments
-[ ] A possible GUI
-[ ] A powershell port
+- [ ] A settings file to enable selection of required paths to avoid manual adjustments
+- [ ] A possible GUI
+- [ ] A powershell port
 
 
 ##### No longer required:
 
-[x] The data directory must only contain files which have a valid P and S wave arrival time within the seismogram. If not, the program will exit with an error. So select all good usable waveforms, put them in a directory, along with their response files as specified above and provide the path to that directory to the script.
+~~The data directory must only contain files which have a valid P and S wave arrival time within the seismogram. If not, the program will exit with an error. So select all good usable waveforms, put them in a directory, along with their response files as specified above and provide the path to that directory to the script.~~
