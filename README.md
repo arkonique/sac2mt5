@@ -80,7 +80,7 @@ The older repository containing v1.0 has been removed so those changes are no lo
 3. Added capability to separately created different DSN files for P ans S waves for an easier handling of the results when using MT5INT
 
 
-#### Bugfixes:
+### Bugfixes:
 
 - Changed the input format for dates due to a datetime input error, which caused the script to fail when passing inputs from an event list file through a script when time is in single digits. The change in format also allows for more readable inputs.
 - Fixed station selection algorithm for selecting each 100 stations, which caused stations with similar names to get selected.
@@ -89,19 +89,19 @@ The older repository containing v1.0 has been removed so those changes are no lo
 
 --------------------
 
-#### Known Bugs and Problems:
+### Known Bugs and Problems:
 
 - Stations with clear P and S wave marks are sometimes not used
 - SAC files need to be copied to the present working directory for this to work, making the script much slower
 - Installation script trashes .bashrc sometimes
 
-#### Upcoming updates:
+### Upcoming updates:
 
 - [ ] A settings file to enable selection of required paths to avoid manual adjustments
 - [ ] A possible GUI
 - [ ] A powershell port
 
 
-##### No longer required:
+#### No longer required:
 
 ~~The data directory must only contain files which have a valid P and S wave arrival time within the seismogram. If not, the program will exit with an error. So select all good usable waveforms, put them in a directory, along with their response files as specified above and provide the path to that directory to the script.~~
