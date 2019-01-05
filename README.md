@@ -3,7 +3,7 @@ sac2mt5 v1.3
 SAC to DSN format converter
 
 -------------------------
-sac2mt5 is an abstraction layer for the SACtoDSN.pl perl script written by McCaffrey available at http://www.geology.cwu.edu/facstaff/walter/mt5/SACtoDSN.pl
+sac2mt5 is an abstraction layer for the SACtoDSN.pl perl script written by McCaffrey & Walter available at http://www.geology.cwu.edu/facstaff/walter/mt5/SACtoDSN.pl
 
 -------------------------
 
@@ -49,7 +49,7 @@ source install.sh
     -d/--directory   Specify the directory containing all the SAC files. 
                      This directory must also contain a subdirectory called RESP containing all the instrument response files
 
-    -o/--output      Specify the name of the output DSN file. This will be created inside the data directory.
+    -o/--output      Specify the name of the output DSN file. This will be created inside a directory called selected_s2m in                      the data directory.
 
     -h/--help        Display this help
 
@@ -69,6 +69,14 @@ source install.sh
 3. Additional paths might need to be changed based on your TauP installation. Check where your ".tvel" files are within your installation. Put in the required directory name in TauP.pm inside Taup-0.01
 
 --------------------
+
+**Updates:**
+1. Added capability to also mark P and S wave arrival times, along with adding the necessary headers and selecting only those seismograms with a P or S wave arrival within the specified window
+
+--------------------
+
+--------------------
+
 The data directory must only contain files which have a valid P and S wave arrival time within the seismogram. If not, the program will exit with an error. So select all good usable waveforms, put them in a directory, along with their response files as specified above and provide the path to that directory to the script.
 
 --------------------
