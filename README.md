@@ -49,7 +49,8 @@ source install.sh
     -d/--directory   Specify the directory containing all the SAC files. 
                      This directory must also contain a subdirectory called RESP containing all the instrument response files
 
-    -o/--output      Specify the name of the output DSN file. This will be created inside a directory called selected_s2m in                      the data directory. Preferrably a 6 digit code.
+    -o/--output      Specify the name of the output DSN file. This will be created inside a directory called selected_s2m in
+                     the data directory. Preferrably a 6 digit code. The files will be generated as outputP1.DSN and so on
 
     -h/--help        Display this help
 
