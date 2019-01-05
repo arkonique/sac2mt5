@@ -1,0 +1,45 @@
+#!/bin/bash
+
+read -p "Enter Data Directory: " dir
+cd $dir
+rm -rf selected_s2m
+mkdir selected_s2m
+mkdir selected_s2m/RESP
+mkdir selected_s2m/PZ
+evla=$1
+evlo=$2
+evdp=$3
+orig=$4
+
+for file in *.SAC
+do
+sac<<!
+r $file
+rmean
+rtrend
+ch evla $evla
+ch evlo $evlo
+ch evdp $evdp
+ch o gmt $orig
+wh
+w over
+q
+!
+taup_setsac -mod iasp91 -ph P-1,S-2 -evdpkm $file
+sttn=`saclhdr -KSTNM $file`
+pmark=`saclhdr -T1 $file | awk '{print ($1==-12345)?0:1}'`
+smark=`saclhdr -T2 $file | awk '{print ($1==-12345)?0:1}'`
+smarker=`saclhdr -T2 $file`
+endtime=`saclhdr -E $file`
+omarker=`saclhdr -O $file | awk '{print ($1>=0)?1:0}'`
+if [ $pmark -eq 1 ] && [ $smark -eq 1 ] && [ $omarker -eq 1 ]
+then
+diff=$(echo $endtime - $smarker | bc | awk '{print ($1 >= 60)?1:0 }') 
+if [ $diff -eq 1 ]
+then
+cp $file selected_s2m
+cp RESP/*$sttn* selected_s2m/RESP/
+cp PZ/*$sttn* selected_s2m/PZ/
+fi
+fi
+done
