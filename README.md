@@ -1,5 +1,5 @@
-[Zip file] [https://github.com/arkonique/sac2mt5/zipball/master]
-[Tar file] [https://github.com/arkonique/sac2mt5/zipball/master]
+[Zip file] (https://github.com/arkonique/sac2mt5/zipball/master)
+[Tar file] (https://github.com/arkonique/sac2mt5/zipball/master)
 # sac2mt5
 sac2mt5 v1.3
 SAC to DSN format converter
