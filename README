@@ -1,0 +1,43 @@
+Seed-Response
+
+This perl module parses Seed Response files.
+
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Seed::Response
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Seed-Response
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/Seed-Response
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/Seed-Response
+
+    Search CPAN
+        http://search.cpan.org/dist/Seed-Response/
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2009 Walter Szeliga
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
