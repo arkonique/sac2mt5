@@ -25,7 +25,7 @@ cat<<!
 ${red}sac2mt5${normal} is an abstraction layer for the SACtoDSN.pl perl script written by McCaffrey available at ${blue}${underline}http://www.geology.cwu.edu/facstaff/walter/mt5/SACtoDSN.pl${normal}
 
 ${bold}${yellow}Usage:${normal} 
-    sac2mt5 ${green}[-d/--directory<data directory>] [-o/--output<output file>] [-t/--date <YYMMDDHHmmss.s = date and time>] [-l/--latlong <LAT/LONG>] [-n/--depth <event depth>] [-h/--help]${normal}
+    sac2mt5 ${green}[-d/--directory<data directory>] [-o/--output<output file>] [-t/--date <YY/MM/DD/HH/mm/ss = date and time>] [-l/--latlong <LAT/LONG>] [-n/--depth <event depth>] [-h/--help]${normal}
 
 ${bold}${yellow}Options:${normal}
     -d/--directory   Specify the directory containing all the SAC files. 
@@ -33,7 +33,7 @@ ${bold}${yellow}Options:${normal}
 
     -o/--output      Specify the name of the output DSN file. This will be created inside the data directory. Do not include the filename extension.
 
-    -t/--date        Specify the date and time in YY/MM/DD/HH/mm/ss.s format
+    -t/--date        Specify the date and time in YY/MM/DD/HH/mm/ss format
 
     -l/--latlong     Specify the latitude and longitude of the event in LAT/LON format
 
@@ -197,7 +197,7 @@ then
 fi
 if [ $t_flag -eq 0 ];
 then
-	read -p "Enter event date and time (YY/MM/DD/hh/mm/ss.s): " time;
+	read -p "Enter event date and time (YY/MM/DD/hh/mm/ss): " time;
 	otime=$time
 	time=`echo ${time} | awk -F/ '{print $1$2$3$4$5$6}'`
 fi
